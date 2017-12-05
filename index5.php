@@ -20,6 +20,14 @@
         </progress-view>
     </div>
 </div>
+<div id="temps">
+{{text}}
+    <div>
+        <car name="title">HEAD</car>
+        <car>carcar</car>
+        <car name="bottom">footer</car>
+    </div>
+</div>
 
 <script src="vue5.js"></script>
 </body>

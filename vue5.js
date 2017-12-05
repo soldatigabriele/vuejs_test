@@ -1,3 +1,22 @@
+Vue.component('car',
+    {
+    template: `
+        <div>
+        <div><slot name="title"></slot></div><br>
+        <div><slot>Default text</slot></div>
+        <div><slot name="bottom"></slot></div>
+        </div>
+    `,
+});
+
+Slots = new Vue({
+    el: '#temps',
+    data:{
+        text: 'messmess',
+    },
+    methods:{},
+    created(){},
+});
 
 window.Perc = Vue.component('progress-view',{
     data(){
@@ -11,6 +30,7 @@ window.Perc = Vue.component('progress-view',{
     created(){
         this.$on('add', () => this.percent += 10);
         this.$on('add', () => App.message = 'not cool');
+        this.$on('add', () => Slots.text = 'clicked');
     },
 
 });
