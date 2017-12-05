@@ -1,0 +1,81 @@
+<script src="https://unpkg.com/vue"></script>
+
+
+
+<!--  -->
+<!-- <div class="container"> -->
+<!--     <div class="row"> -->
+<!--         <div class="col&#45;md&#45;8 col&#45;md&#45;offset&#45;2"> -->
+<!--             <div class="panel panel&#45;default"> -->
+<!--                 <div class="panel&#45;heading">Register</div> -->
+<!--  -->
+<!--                 <div class="panel&#45;body"> -->
+<!--                     I'm an example component! -->
+<!--                     <div id="app&#45;3"> -->
+<!--                        <li v&#45;for="s in seen" v&#45;if="display" v&#45;text="s"> -->
+<!--                           <span>{{seen}} Now you see me</span> -->
+<!--                         </li> -->
+<!--                         <input type="name" id="input_name" v&#45;model="newName" v&#45;on:keyUp="addName"> -->
+<!--                         <button @click="addName"> Add Name</button> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--                 <div class="panel&#45;body"> -->
+<!--                     <div id="app&#45;2"> -->
+<!--                         <input v&#45;model="bla"> -->
+<!--                         {{bla}} -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </div> -->
+<!--     </div> -->
+<!-- </div> -->
+
+start
+<ol>
+  <!-- Create an instance of the todo-item component -->
+  <todo-item></todo-item>
+</ol>
+
+end
+<example-component></example-component>
+
+<script>
+// var app2 = new Vue({
+// el: '#app-2',
+//     data:{
+//     bla: '',
+// }
+// });
+//
+// var app3 = new Vue({
+//     el: '#app-3',
+//     data: {
+//         newName: '',
+//         display:true,
+//         seen: ['true','for','test'],
+//     },
+//     methods: {
+//         addName() {
+//             this.seen.push(this.newName);
+//             this.newName = '';
+//         }    
+//     }
+//     // mounted(){
+//         // document.querySelector('#but').addEventListener('click', ()=>{
+//         //     let name = document.querySelector('#input_name');
+//         //     app3.seen.push(name.value);
+//         //     name.value = '';
+//         // });
+//         
+//     // }
+// });
+
+// Define a new component called todo-item
+Vue.component('todo-item', {
+    props: ['todo'],
+    template: '<li>{{todo.text}}</li>'
+});
+
+</script>
+
+
